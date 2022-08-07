@@ -7,6 +7,24 @@ body {
   -webkit-font-smoothing: antialised;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4d4d57;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .mainHeader {
   @apply w-full py-5 flex items-center justify-center bg-gray-700 border-b border-gray-600;
 }
