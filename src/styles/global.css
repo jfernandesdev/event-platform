@@ -36,3 +36,7 @@ body {
 .buttonCard {
   @apply bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors
 }
+
+.inputSubscribe {
+  @apply bg-gray-900 rounded px-5 h-14
+}
