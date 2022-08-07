@@ -38,5 +38,5 @@ body {
 }
 
 .inputSubscribe {
-  @apply bg-gray-900 rounded px-5 h-14
+  @apply bg-gray-900 rounded px-5 h-14 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500
 }
