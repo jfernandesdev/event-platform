@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-900 text-zinc-100;
+  @apply bg-gray-900 text-zinc-100;
 }
 
-.title {
-  @apply text-5xl font-bold;
+.mainHeader {
+  @apply w-full py-5 flex items-center justify-center bg-gray-700 border-b border-gray-600;
 }
