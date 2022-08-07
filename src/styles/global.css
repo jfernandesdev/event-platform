@@ -10,3 +10,11 @@ body {
 .mainHeader {
   @apply w-full py-5 flex items-center justify-center bg-gray-700 border-b border-gray-600;
 }
+
+.buttonWithIcon {
+  @apply p-4 text-sm flex items-center rounded font-bold uppercase gap-2 justify-center transition-colors
+}
+
+.buttonCard {
+  @apply bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors
+}
