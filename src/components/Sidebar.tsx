@@ -5,7 +5,7 @@ export function Sidebar() {
   const { data } = useGetLessonsQuery()
   return (
     <>
-      <aside className="w-[348px] bg-gray-700 p-6 border-l border-gray-600 h-[calc(100vh_-_75px)] overflow-auto">
+      <aside className="relative w-full md:w-[348px] bg-gray-700 p-6 md:border-l md:border-gray-600 h-[calc(100vh_-_75px)] overflow-auto z-[1]">
         <span className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500 block">
           Cronograma de aulas
         </span>

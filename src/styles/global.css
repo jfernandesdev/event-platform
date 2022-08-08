@@ -25,18 +25,19 @@ body {
   background: transparent;
 }
 
-.mainHeader {
-  @apply w-full py-5 flex items-center justify-center bg-gray-700 border-b border-gray-600;
-}
-
 .buttonWithIcon {
-  @apply p-4 text-sm flex items-center rounded font-bold uppercase gap-2 justify-center transition-colors
-}
-
-.buttonCard {
-  @apply bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors
+  @apply p-4 text-sm flex items-center rounded font-bold uppercase gap-2 justify-center transition-colors;
 }
 
 .inputSubscribe {
-  @apply bg-gray-900 rounded px-5 h-14 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500
+  @apply bg-gray-900 rounded px-5 h-14 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500;
+}
+
+.activeCard::before {
+  @apply absolute top-0 bottom-0 m-auto bg-green-500 rounded-sm;
+  content: '';
+  width: 13.75px;
+  height: 13.75px;
+  left: calc(-13px/2);
+  transform: matrix(0.71, -0.68, 0.74, 0.71, 0, 0);
 }

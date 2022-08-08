@@ -8,6 +8,7 @@ import {
 } from 'phosphor-react'
 
 import { ButtonCard } from './ButtonCard'
+import { Footer } from './Footer'
 
 import '@vime/core/themes/default.css'
 import { useGetLessonBySlugQuery } from '../graphql/generated'
@@ -31,12 +32,10 @@ export function Video({ lessonSlug }: VideoProps) {
     )
   }
 
-  console.log(data)
-
   return (
     <div className="flex-1 h-[calc(100vh_-_75px)] overflow-auto">
       <div className="bg-black flex justify-center">
-        <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
+        <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video z-0">
           <Player>
             <Youtube videoId={data.lesson.videoId} />
             <DefaultUi />
@@ -44,11 +43,13 @@ export function Video({ lessonSlug }: VideoProps) {
         </div>
       </div>
 
-      <div className="p-8 max-w-[1100px] mx-auto">
-        <div className="flex items-start gap-16">
+      <div className="p-6 md:p-8 max-w-[1100px] mx-auto">
+        <div className="flex flex-col md:flex-row items-start gap-6 md:gap-16">
           <div className="flex-1">
-            <h1 className="text-2xl font-bold">{data.lesson.title}</h1>
-            <p className="mt-4 text-gray-200 leading-relaxed">
+            <h1 className="text-lg md:text-2xl font-bold">
+              {data.lesson.title}
+            </h1>
+            <p className="text-sm md:text-base mt-4 text-gray-200 leading-relaxed">
               {data.lesson.description}
             </p>
 
@@ -61,7 +62,7 @@ export function Video({ lessonSlug }: VideoProps) {
                 />
 
                 <div className="leading-relaxed">
-                  <strong className="text-2xl block">
+                  <strong className="text-lg md:text-2xl block">
                     {data.lesson.teacher.name}
                   </strong>
                   <span className="text-gray-200 text-sm block">
@@ -72,7 +73,7 @@ export function Video({ lessonSlug }: VideoProps) {
             )}
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 w-full md:w-auto">
             <a
               href="#"
               className="buttonWithIcon bg-green-500 hover:bg-green-700"
@@ -91,7 +92,7 @@ export function Video({ lessonSlug }: VideoProps) {
           </div>
         </div>
 
-        <div className="gap-8 mt-20 grid grid-cols-2">
+        <div className="gap-8 mt-16 md:mt-20 grid md:grid-cols-2">
           <ButtonCard
             url="#"
             title="Material complementar"
@@ -108,6 +109,8 @@ export function Video({ lessonSlug }: VideoProps) {
           />
         </div>
       </div>
+
+      <Footer />
     </div>
   )
 }
