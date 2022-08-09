@@ -19,12 +19,16 @@ export function Subscribe() {
   async function handleSubscribe(event: FormEvent) {
     event.preventDefault()
 
-    await createSubscriber({
-      variables: {
-        name,
-        email,
-      },
-    })
+    try {
+      await createSubscriber({
+        variables: {
+          name,
+          email,
+        },
+      })
+    } catch {
+      console.log('Erro na inscrição!')
+    }
 
     navigate('/event')
   }
